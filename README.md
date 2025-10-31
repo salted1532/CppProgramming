@@ -263,7 +263,7 @@ cout << num << endl; // 2
 - setMenu(): 메뉴 선택 및 금액 차감
 
 - setCola(): 구매 수량 입력
-
+```
 #include <iostream>
 using namespace std;
 
@@ -321,3 +321,4 @@ void main() {
     m1.setCoin();
     m1.setMenu();
 }
+```
