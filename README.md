@@ -218,7 +218,7 @@ cout << sum << endl; // 50
 - 홈 네트워크 시뮬레이션
 
 - 서버 인터페이스 다형성
-
+```
 class Server { public: virtual void turnOn()=0; };
 class Television : public Server {
 public: void turnOn(){cout<<"TV ON"<<endl;}
@@ -228,16 +228,17 @@ int main() {
     Server* s1 = new Television();
     s1->turnOn(); // TV ON
 }
+```
+---
+## 13주차 – 예외 처리, 템플릿, STL
+### 학습 내용
 
-13주차 – 예외 처리, 템플릿, STL
-학습 내용
+- 예외 처리: try, catch, throw
 
-예외 처리: try, catch, throw
+- 함수 및 클래스 템플릿
 
-함수 및 클래스 템플릿
-
-STL(vector, algorithm)
-
+- STL(vector, algorithm)
+```
 template<typename T>
 T getmax(T x, T y){ return (x>y)?x:y; }
 
@@ -246,23 +247,25 @@ cout << getmax(10,20) << endl; // 20
 vector<int> vec={1,2,3,4,5};
 int num = count_if(vec.begin(), vec.end(), [](int n){return n%2==0;});
 cout << num << endl; // 2
+```
+---
+## 기말고사 – 자판기 프로젝트
+### 학습 내용
 
-기말고사 – 자판기 프로젝트
-학습 내용
+- 자판기 시뮬레이션
 
-자판기 시뮬레이션
+- 멤버 변수: 금액, 음료 종류
 
-멤버 변수: 금액, 음료 종류
+- 함수:
 
-함수:
+- setCoin(): 돈 입력
 
-setCoin(): 돈 입력
+- setMenu(): 메뉴 선택 및 금액 차감
 
-setMenu(): 메뉴 선택 및 금액 차감
+- setCola(): 구매 수량 입력
 
-setCola(): 구매 수량 입력
-
-예시 코드
+```예시 코드
 Machine m1;
 m1.setCoin(); // 돈 투입
 m1.setMenu(); // 메뉴 선택
+```
